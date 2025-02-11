@@ -1,0 +1,132 @@
+/* Full style.css with Responsiveness */
+
+/* Ensure full-height for html and body, reset margins, and set a light background */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+/* Wrapper for sticky footer layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* Content area that grows to fill available space */
+.content {
+  flex: 1;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Navbar links styling */
+.nav-link {
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+/* Card styling for product cards and other card components */
+.card {
+  border: none;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Button primary styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Floating form control label styling on focus */
+.form-floating > .form-control:focus ~ label {
+  color: #007bff;
+}
+
+/* Table styling for a clean look */
+.table {
+  background-color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Footer styling: ensures the footer is distinct and sticky */
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    margin-right: 5px;
+  }
+
+  /* Reduce card margins for mobile */
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust padding in content container */
+  .content {
+    padding: 1rem;
+  }
+
+  /* Scale down table text */
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+/* For medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+/* For larger screens, you can further adjust if needed */
+@media (min-width: 768px) {
+  .content {
+    padding: 2rem;
+  }
+}
